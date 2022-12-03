@@ -73,6 +73,7 @@ class _GetXTestPageState extends State<GetXTestPage> {
                 ],
               );
             }),
+
             Builder(builder: (context) {
               print("次数 build");
 
