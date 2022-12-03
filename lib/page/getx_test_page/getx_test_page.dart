@@ -45,6 +45,7 @@ class _GetXTestPageState extends State<GetXTestPage> {
     // Get.put<CounterController2>(CounterController2(2));
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
