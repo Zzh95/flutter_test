@@ -62,7 +62,6 @@ class _GetXTestPageState extends State<GetXTestPage> {
                 children: [
                   Text("controller点击次数: ${controller.count}"),
                   GetBuilder<CounterController2>(
-
                       builder: (controller) {
                         return Column(
                           children: [
