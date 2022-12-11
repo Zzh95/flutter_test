@@ -1,6 +1,5 @@
 library popup_windows;
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test_plugin/my_popup/popup_window_route.dart';
 
@@ -41,7 +40,7 @@ class PopupWindowWidget<T> extends StatefulWidget {
       this.interval = 4,
       this.arrowWidget,
       this.arrowOffset = 0,
-        this.arrowPosition = ArrowPosition.center,
+      this.arrowPosition = ArrowPosition.center,
       this.offset = Offset.zero})
       : super(key: key);
 
@@ -90,7 +89,6 @@ class PopupWindowWidget<T> extends StatefulWidget {
 
   final ArrowPosition arrowPosition;
 
-
   @override
   _PopupWindowWidgetState createState() => _PopupWindowWidgetState();
 }
@@ -138,8 +136,7 @@ class _PopupWindowWidgetState<T> extends State<PopupWindowWidget<T>> {
             interval: widget.interval,
             arrowWidget: widget.arrowWidget,
             arrowOffset: widget.arrowOffset,
-        arrowPosition: widget.arrowPosition
-        ));
+            arrowPosition: widget.arrowPosition));
   }
 
   @override

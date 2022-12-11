@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test_plugin/my_popup/popup_windows.dart';
+
 class PopupWindowsPage extends StatefulWidget {
   const PopupWindowsPage({Key? key}) : super(key: key);
 
@@ -21,9 +22,13 @@ class _PopupWindowsPageState extends State<PopupWindowsPage> {
               height: 600,
             ),
             dialogWidget1(),
-            Container(height: 50,),
+            Container(
+              height: 50,
+            ),
             dialogWidget2(),
-            Container(height: 50,),
+            Container(
+              height: 50,
+            ),
             dialogWidget3(),
             Container(
               height: 600,
@@ -34,7 +39,7 @@ class _PopupWindowsPageState extends State<PopupWindowsPage> {
     );
   }
 
-  Widget dialogWidget1(){
+  Widget dialogWidget1() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -44,33 +49,33 @@ class _PopupWindowsPageState extends State<PopupWindowsPage> {
           intelligentConversion: true,
           direction: Direction.Top,
           showChild: Container(
-          height: 200,
-          width: 200,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            color: Colors.blue
+            height: 200,
+            width: 200,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12), color: Colors.blue),
+            child: Text("测试"),
           ),
-          child: Text("测试"),
-        ), child: Container(
-          width: 100,
-          height: 50,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              color: Colors.red
+          child: Container(
+            width: 100,
+            height: 50,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12), color: Colors.red),
+            child: Text("top按钮"),
           ),
-          child: Text("top按钮"),
-        ),),
+        ),
       ],
     );
   }
 
-  Widget dialogWidget2(){
+  Widget dialogWidget2() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        Container(width: 0,),
+        Container(
+          width: 0,
+        ),
         PopupWindowWidget(
           showChildHeight: 200,
           showChildWidth: 100,
@@ -82,30 +87,32 @@ class _PopupWindowsPageState extends State<PopupWindowsPage> {
             width: 100,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Colors.blue
-            ),
+                borderRadius: BorderRadius.circular(12), color: Colors.blue),
             child: Text("测试"),
-          ), child: Container(
-          width: 150,
-          height: 50,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              color: Colors.red
           ),
-          child: Text("top按钮"),
-        ),),
-        Container(width: 20,),
+          child: Container(
+            width: 150,
+            height: 50,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12), color: Colors.red),
+            child: Text("top按钮"),
+          ),
+        ),
+        Container(
+          width: 20,
+        ),
       ],
     );
   }
 
-  Widget dialogWidget3(){
+  Widget dialogWidget3() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Container(width: 0,),
+        Container(
+          width: 0,
+        ),
         PopupWindowWidget(
           showChildHeight: 200,
           showChildWidth: 200,
@@ -113,27 +120,27 @@ class _PopupWindowsPageState extends State<PopupWindowsPage> {
           arrowHeight: 12,
           arrowWidth: 24,
           direction: Direction.Top,
-            arrowPosition: ArrowPosition.right,
+          arrowPosition: ArrowPosition.right,
           showChild: Container(
             height: 200,
             width: 200,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Colors.blue
-            ),
+                borderRadius: BorderRadius.circular(12), color: Colors.blue),
             child: Text("测试"),
-          ), child: Container(
-          width: 50,
-          height: 50,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              color: Colors.red
           ),
-          child: Text("1"),
-        ),),
-        Container(width: 0,),
+          child: Container(
+            width: 50,
+            height: 50,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12), color: Colors.red),
+            child: Text("1"),
+          ),
+        ),
+        Container(
+          width: 0,
+        ),
       ],
     );
   }
