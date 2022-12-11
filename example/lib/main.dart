@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test_plugin/flutter_test_plugin.dart';
+import 'package:flutter_test_plugin_example/test_page/popup_windows_page.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
@@ -97,6 +98,14 @@ class _TestPageState extends State<TestPage> {
             }));
           },
           child: Text('getX测试页面'),
+        ),
+        ElevatedButton(
+          onPressed: () async {
+            Navigator.push(context, MaterialPageRoute(builder: (_){
+              return PopupWindowsPage();
+            }));
+          },
+          child: Text('弹窗测试页面'),
         ),
       ],
     );
